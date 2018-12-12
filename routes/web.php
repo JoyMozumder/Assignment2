@@ -14,6 +14,8 @@
 Route::group(['middleware' => 'checkloggedout'], function(){
 Route::get('login','HomeController@login');
 Route::get('registration','HomeController@registration');
+Route::get('/index','HomeController@index');
+Route::get('/downloadPDF/{id}','HomeController@downloadPDF');
 Route::post('loginstore','HomeController@postlogin');
 Route::post('store','HomeController@store');
 });
